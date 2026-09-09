@@ -1,6 +1,4 @@
-# LLMVul
-
-**LLMVul: A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories**
+# LLMVul: A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22668216.svg)](https://doi.org/10.5281/zenodo.22668216)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -11,32 +9,20 @@
 
 ## Overview
 
-LLMVul is the **first vulnerability-labeled 
-dataset of C/C++ functions mined from real 
-production GitHub repositories** where developers 
-used AI coding assistants including GitHub Copilot, 
-ChatGPT, Claude Code, Cursor, and Gemini.
+LLMVul is the **first vulnerability-labeled  dataset of LLM generated C/C++ functions mined from real  production GitHub repositories** where developers used AI coding assistants including GitHub Copilot, ChatGPT, Claude Code, Cursor, and Gemini.
 
-Unlike all prior LLM security benchmarks 
-(SecurityEval, CyberSecEval, SafeGenBench, CWEval), 
-which generate code through controlled researcher 
-prompts, LLMVul captures vulnerabilities that 
-arise **incidentally** in authentic developer 
-workflows — the threat model that CI/CD security 
-pipelines must actually defend against.
+Unlike all prior LLM security benchmarks which generate code through controlled researcher 
+prompts, LLMVul captures vulnerabilities that arise **incidentally** in authentic developer workflows.
 
 
-✨ **Real production code** — mined from 1200 GitHub
-repositories, not researcher-directed prompts
+## What It Provides
+✨ **Real production code** — mined from 1,200 GitHub repositories, not researcher-directed prompts
 
-✨ **AI tool attribution** — records which assistant
-generated the code (9 tools covered)
+✨ **AI tool attribution** — records which assistant generated the code (9 tools covered)
 
-✨ **Validated labels** — three-tool ensemble with
-human validation (Cohen's κ = 0.79)
+✨ **Validated labels** — three-tool ensemble with human validation (Cohen's κ = 0.79)
 
-✨ **Full provenance** — commit ID, URL, message,
-date, file hash per function
+✨ **Full provenance** — commit ID, URL, message, date, file hash per function
 
 ### Key Statistics
 
@@ -89,7 +75,7 @@ LLMVul/
 
 | Category | Column | Description |
 |----------|--------|-------------|
-| **Function Identity** | `unique_id` | Stable SHA-256-based identifier. Format: `PIVD_XXXXXXXXXXXXXXXX` |
+| **Function Identity** | `unique_id` | 16-length hexadecimal string identifier. Format: `ID_XXXB7F0FA3BCEXXX` |
 | **Project** | `project_name` | GitHub repository in `owner/repo` format |
 | **Project** | `project_url` | Full URL of the GitHub repository |
 | **Commit** | `commit_id` | Full 40-character Git commit SHA |
@@ -206,7 +192,7 @@ print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 
 ---
 
-## Research Questions Enabled
+## Potential Research Questions
 
 | RQ | Question |
 |----|----------|
@@ -271,7 +257,6 @@ ensemble-vulnerable functions with:
 | `function_body` | Function source code |
 | `rater1_label` | First rater label (0/1) |
 | `rater2_label` | Second rater label (0/1) |
-| `consensus` | Agreed final label |
 
 ---
 
@@ -292,9 +277,8 @@ If you use LLMVul in your research, please cite:
 @inproceedings{llmvul2026Farhad,
   author    = {Mohammad Farhad and Shuvalaxmi Dass},
   title     = {LLMVul: A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories},
-  booktitle = {arxiv},
+  journal={arXiv preprint arXiv:2604.XXX},
   year      = {2026},
-  doi       = {https://doi.org/10.5281/zenodo.22668216}
 }
 ```
 ---
