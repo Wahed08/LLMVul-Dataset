@@ -56,13 +56,11 @@ LLMVul/
 │   │                              
 │   ├── LLMVul_sample_100.csv   (100-row preview)
 │   └── manual_validation/
-│       └── manual_review_100.csv (100 manually
-│                                  validated functions
-│                                  with rater labels
-│                                  and consensus)
+│       └── manual_review_100.csv (100 manually validated functions with rater labels  and consensus)                         
+│                                 
 ├── scripts/
 │   ├── mining/
-│   │   └── pivd_mine_cpp.py      (GitHub mining)
+│   │   └── llmvul_mine.py      (GitHub mining)
 │   └── labeling/
 │       └── label_ensemble.py     (3-tool labeling)
 └── paper/
@@ -209,7 +207,7 @@ print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 
 ```bash
 # Clone the repository
-git clone https://github.com/Wahed08/LLMVul
+git clone https://github.com/Wahed08/LLMVul-Dataset
 cd LLMVul
 
 # Install dependencies
@@ -221,7 +219,7 @@ apt-get install flawfinder  # Linux/Colab
 export GITHUB_TOKEN="your_token_here"
 
 # Step 1: Mine LLM-attributed commits
-python scripts/mining/llmvul_mine_cpp.py
+python scripts/mining/llmvul_mine.py
 
 # Step 2: Label with ensemble
 python scripts/labeling/label_ensemble.py
@@ -274,7 +272,7 @@ Scripts: [MIT License](LICENSE)
 If you use LLMVul in your research, please cite:
 
 ```bibtex
-@inproceedings{llmvul2026Farhad,
+@article{llmvul2026Farhad,
   author    = {Mohammad Farhad and Shuvalaxmi Dass},
   title     = {LLMVul: A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories},
   journal={arXiv preprint arXiv:2604.XXX},
