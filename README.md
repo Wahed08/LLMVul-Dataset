@@ -11,8 +11,7 @@
 
 LLMVul is the **first vulnerability-labeled  dataset of LLM generated C/C++ functions mined from real  production GitHub repositories** where developers used AI coding assistants including GitHub Copilot, ChatGPT, Claude Code, Cursor, and Gemini.
 
-Unlike all prior LLM security benchmarks which generate code through controlled researcher 
-prompts, LLMVul captures vulnerabilities that arise **incidentally** in authentic developer workflows.
+LLMVul mines AI-attributed C/C++ code from authentic developer workflows and public software repositories. It preserves code contribution context through AI-tool attribution and commit metadata while removing duplicate function instances. The extracted functions are analyzed using a multi-tool vulnerability detection pipeline with CWE classification and manual validation. This enables the study of vulnerabilities that arise incidentally during routine AI-assisted development rather than through explicitly security-focused code generation.
 
 
 ## What It Provides
@@ -44,30 +43,6 @@ prompts, LLMVul captures vulnerabilities that arise **incidentally** in authenti
 
 ---
 
-## Repository Structure
-
-```
-LLMVul/
-├── README.md
-├── CITATION.cff
-├── LICENSE                        (CC BY 4.0)
-├── data/
-│   ├── LLMVul_v3-Updated.csv           (full dataset — also on Zenodo)
-│   │                              
-│   ├── LLMVul_sample_100.csv   (100-row preview)
-│   └── manual_validation/
-│       └── manual_review_100.csv (100 manually validated functions with rater labels  and consensus)                         
-│                                 
-├── scripts/
-│   ├── mining/
-│   │   └── llmvul_mine.py      (GitHub mining)
-│   └── labeling/
-│       └── label_ensemble.py     (3-tool labeling)
-└── paper/
-    └── llmvul.pdf     (arxiv)
-```
-
----
 
 ## Dataset Columns (34 Total)
 
@@ -76,9 +51,9 @@ LLMVul/
 | **Function Identity** | `unique_id` | 16-length hexadecimal string identifier. Format: `ID_XXXB7F0FA3BCEXXX` |
 | **Project** | `project_name` | GitHub repository in `owner/repo` format |
 | **Project** | `project_url` | Full URL of the GitHub repository |
-| **Commit** | `commit_id` | Full 40-character Git commit SHA |
+| **Commit** | `commit_id` | Full 40-character Git commit |
 | **Commit** | `commit_url` | Direct URL to the commit on GitHub |
-| **Commit** | `commit_message` | Full commit message (max 1,000 chars) |
+| **Commit** | `commit_message` | Full commit message |
 | **Commit** | `commit_date` | ISO 8601 commit timestamp, e.g. `2024-03-15T10:22:31` |
 | **Source** | `file_name` | Relative path of the source file within the repository |
 | **Source** | `file_hash` | SHA-256 hash of the file at commit time, prefixed `sha256:` |
@@ -132,7 +107,7 @@ ensemble-vulnerable functions.
 Inter-rater agreement: **Cohen's κ = 0.79** 
 (substantial agreement, Landis & Koch 1977).
 The manual validation CSV is available at 
-`data/manual_validation/manual_review_100.csv`.
+`manual_validation_set/LLMVul_manual_review_100_Updated.csv`
 
 ---
 
@@ -194,36 +169,19 @@ print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 
 | RQ | Question |
 |----|----------|
-| RQ1 | Do existing vulnerability predictors (LineVul, VulBERTa) degrade on LLM-generated code vs human-written code? |
-| RQ2 | Do LLM-generated C/C++ functions exhibit a distinct CWE distribution compared to BigVul/PrimeVul? |
+| RQ1 | Do existing vulnerability detectors or detection model degrade on LLM-generated code vs human-written code? |
+| RQ2 | Do LLM-generated C/C++ functions exhibit a distinct CWE distribution compared to hand-written code dataset benchmarks? |
 | RQ3 | Can a predictor fine-tuned on LLMVul outperform general-purpose detectors on LLM-generated code? |
 | RQ4 | Can AI tool attribution metadata train a provenance classifier distinguishing LLM from human code? |
 | RQ5 | Which static analysis tools are most effective on LLM-generated C/C++ code? |
-| RQ6 | Has the vulnerability rate of LLM-generated code changed across AI tool generations (2022–2026)? |
+| RQ6 | Has the proportion of vulnerable functions in LLM-generated code changed across AI tool generations (2022–2026)? |
 
 ---
 
-## Reproduce the Dataset
+## Note on Reproducibility
 
-```bash
-# Clone the repository
-git clone https://github.com/Wahed08/LLMVul-Dataset
-cd LLMVul
+> The underlying repository data may change over time as repositories, commits, and files are updated, removed, or rewritten. Therefore, re-mining the same repositories and time range may not reproduce the exact contents of LLMVul. In addition, vulnerability findings and CWE assignments may differ as analysis tools, rules, and versions evolve. The released dataset represents the snapshot collected and analyzed during our study period.
 
-# Install dependencies
-pip install PyGithub pandas tqdm semgrep
-pip install tree-sitter-languages
-apt-get install flawfinder  # Linux/Colab
-
-# Set GitHub token
-export GITHUB_TOKEN="your_token_here"
-
-# Step 1: Mine LLM-attributed commits
-python scripts/mining/llmvul_mine.py
-
-# Step 2: Label with ensemble
-python scripts/labeling/label_ensemble.py
-```
 
 ---
 
@@ -236,13 +194,13 @@ The full dataset is hosted on Zenodo:
 Files available on Zenodo:
 - `LLMVul_v3-Updated.csv` — full dataset (21,430 functions)
 
+
 ---
 
 ## Manual Validation File
 
-`data/manual_validation/manual_review_100.csv` 
-contains 100 randomly sampled 
-ensemble-vulnerable functions with:
+`manual_validation_set/LLMVul_manual_review_100-Updated.csv` 
+contains 100 randomly sampled ensemble-vulnerable functions with:
 
 | Column | Description |
 |--------|-------------|
