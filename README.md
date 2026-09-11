@@ -231,9 +231,9 @@ If you use LLMVul in your research, please cite:
 
 ```bibtex
 @article{llmvul2026Farhad,
-  author    = {Mohammad Farhad and Shuvalaxmi Dass},
+  author    = {Farhad, Mohammad and Dass, Shuvalaxmi},
   title     = {LLMVul: A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories},
-  journal={arXiv preprint arXiv:2604.XXX},
+  journal={arXiv preprint arXiv:2609.10945},
   year      = {2026},
 }
 ```
