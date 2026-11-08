@@ -1,0 +1,9 @@
+PyGithub>=2.1
+pandas
+tqdm
+scikit-learn
+tree-sitter
+tree-sitter-c
+tree-sitter-cpp
+semgrep
+flawfinder
