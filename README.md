@@ -202,7 +202,7 @@ print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 
 ## Dataset Download
 
-The final LLMVul dataset CSV is available as [LLMVul_v3-Updated.csv](full_CSV_Dataset/LLMVul_v3-Updated.csv) in **full_CSV_Dataset** directory of the repository. The complete dataset package, including the dataset and its accompanying documentation, is also provided as [LLMVul.zip](LLMVul.zip) in the repository root.
+The final LLMVul dataset CSV is available as [LLMVul_v3-Updated.csv](full_CSV_dataset/LLMVul_v3-Updated.csv) in **full_CSV_Dataset** directory of the repository. The complete dataset package, including the dataset and its accompanying documentation, is also provided as [LLMVul.zip](LLMVul.zip) in the repository root.
 
 <!-- The complete LLMVul dataset is publicly available on Zenodo as well:
 
