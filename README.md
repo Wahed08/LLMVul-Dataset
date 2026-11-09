@@ -1,11 +1,11 @@
-# LLMVul: A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories
+# A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24056703.svg)](https://doi.org/10.5281/zenodo.24056703)
+<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24056703.svg)](https://doi.org/10.5281/zenodo.24056703)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Functions](https://img.shields.io/badge/Functions-21%2C430-green.svg)]()
-[![Vulnerable](https://img.shields.io/badge/Vulnerable-1%2C540-red.svg)]()
+[![Vulnerable](https://img.shields.io/badge/Vulnerable-1%2C540-red.svg)]() -->
 
----
+<!-- --- -->
 
 ## Overview
 
@@ -101,15 +101,7 @@ Majority vote:
   1 tool flags   → UNCERTAIN  (excluded from labels)
 ```
 
-**Human validation:** Two independent raters 
-manually labeled 100 randomly sampled 
-ensemble-vulnerable functions.
-Inter-rater agreement: **Cohen's κ = 0.79** 
-(substantial agreement, Landis & Koch 1977).
-The manual validation CSV is available at 
-`manual_validation_set/LLMVul_manual_review_100_Updated.csv`
 
----
 
 ## AI Attribution Signals
 
@@ -135,7 +127,6 @@ Co-authored-by: anthropic
 ...
 ```
 
----
 
 
 
@@ -165,7 +156,6 @@ The dataset construction pipeline consists of multiple interconnected scripts. E
 
 > The underlying repository data may change over time as repositories, commits, and files are updated, removed, or rewritten. Therefore, re-mining the same repositories and time range may not reproduce the exact contents of LLMVul. In addition, vulnerability findings and CWE assignments may differ as analysis tools, rules, and versions evolve. The released dataset represents the snapshot collected and analyzed during our study period.
 
----
 
 ## Quick Start with LLMVul Dataset
 
@@ -195,7 +185,6 @@ print(f"Vulnerable: {(df['vuln_label']==1).sum():,}")
 print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 ```
 
----
 
 ## Potential Research Questions
 
@@ -213,9 +202,9 @@ print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 
 ## Dataset Download
 
-The final LLMVul dataset CSV is available in the **full_CSV_dataset/** directory as **LLMVul_v3-Updated.csv** in the repository. The complete dataset package is also provided as **LLMVul.zip**, which contains the dataset and its accompanying documentation.
+The final LLMVul dataset CSV is available as [LLMVul_v3-Updated.csv](full_CSV_Dataset/LLMVul_v3-Updated.csv) in **full_CSV_Dataset** directory of the repository. The complete dataset package, including the dataset and its accompanying documentation, is also provided as [LLMVul.zip](LLMVul.zip) in the repository root.
 
-The complete LLMVul dataset is publicly available on Zenodo as well (files are restricted, upon acceptance it will be opened):
+<!-- The complete LLMVul dataset is publicly available on Zenodo as well:
 
 **DOI:** [10.5281/zenodo.24056703](https://doi.org/10.5281/zenodo.24056703)
 
@@ -225,15 +214,15 @@ To facilitate access and reuse, the Zenodo record also provides the following fi
 - **`LLMVul.zip`** — Complete dataset package, including the main CSV, manual validation data, README, data dictionary, methodology documentation, and supporting files. Researchers can download this ZIP archive to obtain the entire dataset and its accompanying documentation in one package.
 - **`LLMVul_manual_review_100_Updated.csv`** — Manual validation data containing 100 randomly sampled ensemble-vulnerable functions.
 
-Researchers can either download individual files directly or download the complete ZIP archive for the entire release.
+Researchers can either download individual files directly or download the complete ZIP archive for the entire release. -->
 
 
 ---
 
 ## Manual Validation File
 
-`manual_validation_set/LLMVul_manual_review_100-Updated.csv` 
-contains 100 randomly sampled ensemble-vulnerable functions with:
+**Human validation:** To validate the resulting vulnerability labels, the authors 
+independently and manually labeled 100 randomly sampled  ensemble-vulnerable functions. Inter-rater agreement: **Cohen's κ = 0.79**  (substantial agreement, Landis & Koch 1977). The manual validation CSV is available at `manual_validation_set/LLMVul_manual_review_100_Updated.csv` for quick exploration without downloading full dataset.
 
 | Column | Description |
 |--------|-------------|
