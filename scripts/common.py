@@ -33,12 +33,12 @@ COLUMNS = [
     # Repo metadata
     "repo_stars", "repo_forks", "repo_primary_language", "mined_at",
     # Vulnerability labels
-    "vuln_label", "ensemble_label", "tool_pattern_match", "tool_semgrep",
+    "vuln_label", "ensemble_label", "pattern_match", "tool_semgrep",
     "tool_flawfinder", "cwe_id", "cwe_description", "cwe_url"
 ]
 
 LABEL_COLUMNS = [
-    "vuln_label", "ensemble_label", "tool_pattern_match", "tool_semgrep",
+    "vuln_label", "ensemble_label", "pattern_match", "tool_semgrep",
     "tool_flawfinder", "cwe_id", "cwe_description", "cwe_url"
 ]
 

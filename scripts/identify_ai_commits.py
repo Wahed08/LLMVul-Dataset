@@ -4,8 +4,6 @@
 Strong signals: tool metadata injected in Git (Co-authored-by trailers, etc.).
 Medium signals: developer self-declaration in the commit message.
 
-Input : data/raw/commits.jsonl
-Output: data/interim/ai_commits.jsonl  (adds ai_tool, signal_strength, signal_type)
 
 Usage:
     python scripts/identify_ai_commits.py [--selftest]

@@ -73,7 +73,7 @@ LLMVul mines AI-attributed C/C++ code from authentic developer workflows and pub
 | **Label** | `ensemble_label` | Ensemble verdict: `vulnerable`, `safe`, or `uncertain` |
 | **Tool Result** | `tool_semgrep` | Semgrep result: `1` = flagged, `0` = clean |
 | **Tool Result** | `tool_flawfinder` | Flawfinder result: `1` = flagged, `0` = clean |
-| **Tool Result** | `tool_pattern_match` | Pattern matching result: `1` = flagged, `0` = clean |
+| **Tool Result** | `pattern_match` | Pattern matching result: `1` = flagged, `0` = clean |
 | **CWE** | `cwe_id` | Final CWE assigned, e.g. `CWE-120`. Null if safe or uncertain |
 | **CWE** | `cwe_description` | Human-readable CWE description from MITRE CWE catalogue |
 | **CWE** | `cwe_url` | MITRE CWE reference URL, e.g. `https://cwe.mitre.org/data/definitions/120.html` |

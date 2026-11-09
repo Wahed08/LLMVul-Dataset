@@ -8,9 +8,9 @@ highest-risk matching pattern determines the CWE.
 
 Adds columns:
 
-  tool_pattern_match, cwe_pattern_match_raw 
+  pattern_match, cwe_pattern_match_raw 
 
-Usage: python scripts/pattern_match.py
+Usage: python scripts/run_pattern_match.py
 """
 import re
 from collections import Counter
@@ -123,7 +123,7 @@ def main() -> None:
     uid = df["unique_id"].astype(str)
     flag = uid.map(lambda u: 1 if u in results else 0)
     cwe = uid.map(lambda u: results.get(u, {}).get("cwe"))
-    df["tool_pattern_match"], df["cwe_pattern_match_raw"] = flag, cwe   # clearer aliases
+    df["pattern_match"], df["cwe_pattern_match_raw"] = flag, cwe   # clearer aliases
     save_labeled(df)
 
 
