@@ -1,4 +1,4 @@
-# A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories
+# A Vulnerability-Labeled Dataset of AI-Assisted C/C++ Functions from Production Repositories
 
 <!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24056703.svg)](https://doi.org/10.5281/zenodo.24056703)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -9,7 +9,7 @@
 
 ## Overview
 
-LLMVul is the **first vulnerability-labeled  dataset of LLM generated C/C++ functions mined from real  production GitHub repositories** where developers used AI coding assistants including GitHub Copilot, ChatGPT, Claude Code, Cursor, and Gemini.
+LLMVul is the **first vulnerability-labeled  dataset of AI assisted C/C++ functions mined from real  production GitHub repositories** where developers used AI coding assistants including GitHub Copilot, ChatGPT, Claude Code, Cursor, and Gemini.
 
 LLMVul mines AI-attributed C/C++ code from authentic developer workflows and public software repositories. It preserves code contribution context through AI-tool attribution and commit metadata while removing duplicate function instances. The extracted functions are analyzed using a multi-tool vulnerability detection pipeline with CWE classification and manual validation. This enables the study of vulnerabilities that arise incidentally during routine AI-assisted development rather than through explicitly security-focused code generation.
 
@@ -32,7 +32,7 @@ LLMVul mines AI-attributed C/C++ code from authentic developer workflows and pub
 | Safe functions | 17,211 (80.3%) |
 | Uncertain functions | 2,679 (12.5%) |
 | Source repositories | 226 |
-| LLM-attributed commits | 1,684 |
+| AI-attributed commits | 1,684 |
 | Repositories scanned | 1,200 |
 | Commits scanned | 321,080 |
 | Date range | Nov 2022 – Sep 2026 |
@@ -190,12 +190,12 @@ print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 
 | RQ | Question |
 |----|----------|
-| RQ1 | Do existing vulnerability detectors or detection model degrade on LLM-generated code vs human-written code? |
-| RQ2 | Do LLM-generated C/C++ functions exhibit a distinct CWE distribution compared to hand-written code dataset benchmarks? |
-| RQ3 | Can a predictor fine-tuned on LLMVul outperform general-purpose detectors on LLM-generated code? |
+| RQ1 | Do existing vulnerability detectors or detection model degrade on AI-assisted code vs human-written code? |
+| RQ2 | Do AI-assisted C/C++ functions exhibit a distinct CWE distribution compared to hand-written code dataset benchmarks? |
+| RQ3 | Can a predictor fine-tuned on LLMVul outperform general-purpose detectors on AI-assisted code? |
 | RQ4 | Can AI tool attribution metadata train a provenance classifier distinguishing LLM from human code? |
-| RQ5 | Which static analysis tools are most effective on LLM-generated C/C++ code? |
-| RQ6 | Has the proportion of vulnerable functions in LLM-generated code changed across AI tool generations (2022–2026)? |
+| RQ5 | Which static analysis tools are most effective on AI-assisted C/C++ code? |
+| RQ6 | Has the proportion of vulnerable functions in AI-assisted code changed across AI tool generations (2022–2026)? |
 
 
 ---
@@ -221,8 +221,8 @@ Researchers can either download individual files directly or download the comple
 
 ## Manual Validation File
 
-**Human validation:** To validate the resulting vulnerability labels, the authors 
-independently and manually labeled 100 randomly sampled  ensemble-vulnerable functions. Inter-rater agreement: **Cohen's κ = 0.79**  (substantial agreement, Landis & Koch 1977). The manual validation CSV is available at `manual_validation_set/LLMVul_manual_review_100_Updated.csv` for quick exploration without downloading full dataset.
+**Human validation:** To validate the resulting vulnerability labels, the PI and a student reviewer
+independently labeled 100 randomly sampled ensemble-vulnerable functions. Inter-rater agreement: **Cohen's κ = 0.79**  (substantial agreement, Landis & Koch 1977). The manual validation CSV is available at `manual_validation_set/LLMVul_manual_review_100_Updated.csv` for quick exploration without downloading full dataset.
 
 | Column | Description |
 |--------|-------------|
