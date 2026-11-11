@@ -16,7 +16,7 @@ import pandas as pd
 from common import load_labeled, save_labeled
 
 VOTE_COLS = ["tool_semgrep", "tool_flawfinder", "pattern_match"]
-CWE_PRIORITY = ["cwe_semgrep_raw", "cwe_flawfinder_raw", "cwe_pattern_match_raw"]
+CWE_PRIORITY = ["cwe_semgrep_raw", "cwe_flawfinder_raw", "cwe_pattern-match_raw"]
 
 
 def ensemble(row):

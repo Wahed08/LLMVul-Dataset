@@ -127,8 +127,18 @@ Co-authored-by: anthropic
 ...
 ```
 
+## Potential Research Questions
 
+| RQ | Question |
+|----|----------|
+| RQ1 | Do existing vulnerability detectors or detection model degrade on AI-assisted code vs human-written code? |
+| RQ2 | Do AI-assisted C/C++ functions exhibit a distinct CWE distribution compared to hand-written code dataset benchmarks? |
+| RQ3 | Can a predictor fine-tuned on LLMVul outperform general-purpose detectors on AI-assisted code? |
+| RQ4 | Can AI tool attribution metadata train a provenance classifier distinguishing LLM from human code? |
+| RQ5 | Which static analysis tools are most effective on AI-assisted C/C++ code? |
+| RQ6 | Has the proportion of vulnerable functions in AI-assisted code changed across AI tool generations (2022–2026)? |
 
+---
 
 ## How to Use the Scripts
 
@@ -186,17 +196,6 @@ print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 ```
 
 
-## Potential Research Questions
-
-| RQ | Question |
-|----|----------|
-| RQ1 | Do existing vulnerability detectors or detection model degrade on AI-assisted code vs human-written code? |
-| RQ2 | Do AI-assisted C/C++ functions exhibit a distinct CWE distribution compared to hand-written code dataset benchmarks? |
-| RQ3 | Can a predictor fine-tuned on LLMVul outperform general-purpose detectors on AI-assisted code? |
-| RQ4 | Can AI tool attribution metadata train a provenance classifier distinguishing LLM from human code? |
-| RQ5 | Which static analysis tools are most effective on AI-assisted C/C++ code? |
-| RQ6 | Has the proportion of vulnerable functions in AI-assisted code changed across AI tool generations (2022–2026)? |
-
 
 ---
 
@@ -237,6 +236,17 @@ independently labeled 100 randomly sampled ensemble-vulnerable functions. Inter-
 | `rater2_label` | Second rater label (0/1) |
 
 ---
+
+## Comparison of Existing Work & Supplimentary Figures/Tables 
+
+The repository contains another three folders:
+
+- **comparison-with-existingWork/** [comparison-with-existingWork](comparison-with-existingWork/README.md): Comparison of LLMVul with existing datasets and related work.
+- **supplementary_figures/** [supplementary_figures](supplementary_figures/): Supplementary figures, including Signal-Strength and lines-of-code (LoC) distribution.
+- **supplementary_tables/** [supplementary_tables](/supplementary_tables/README.md): Three supplementary tables providing:
+  1. Top 10 projects with the highest number of ensemble-vulnerable functions.
+  2. Flawfinder finding distribution by vulnerability category.
+  3. Distribution of vulnerable functions across CWE categories.
 
 ## License
 

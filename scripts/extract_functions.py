@@ -6,9 +6,6 @@ take the ADDED lines of each patch, parse them with tree-sitter and keep
 functions with 5-150 lines. One row per function is appended to
 data/interim/VD_dataset.csv.
 
-Input : data/interim/ai_commits.jsonl
-Output: data/interim/VD_dataset.csv
-
 Usage:
     export GITHUB_TOKEN=ghp_xxx
     python scripts/extract_functions.py

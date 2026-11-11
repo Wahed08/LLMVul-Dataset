@@ -17,7 +17,7 @@ RAW_COMMITS = RAW_DIR / "commits.jsonl"            # step 01
 AI_COMMITS = INTERIM_DIR / "ai_commits.jsonl"      # step 02
 FUNCTIONS_CSV = INTERIM_DIR / "VD_dataset.csv"     # step 03
 LABELED_CSV = LABELED_DIR / "vd_labeled.csv"       # steps 04-07
-FINAL_CSV = FINAL_DIR / "LLMVul_v1.csv"            # step 08
+FINAL_CSV = FINAL_DIR / "LLMVul_v1.csv"            
 
 for _d in (RAW_DIR, INTERIM_DIR, LABELED_DIR, FINAL_DIR, WORK_DIR):
     _d.mkdir(parents=True, exist_ok=True)
