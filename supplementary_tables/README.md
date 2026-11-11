@@ -21,7 +21,7 @@
 ## Table 2
 ### Flawfinder Finding Distribution by Category
 
-To further categorize the CWE-676 findings, we applied a function-name-based classification procedure that mapped Flawfinder-flagged functions to predefined vulnerability categories using their associated security-risk descriptions. 
+To further categorize the CWE-676 findings (total of 2,091), we applied a function-name-based classification procedure that mapped Flawfinder-flagged functions to predefined vulnerability categories using their associated security-risk descriptions. 
 
 The following table summarizes the distribution of Flawfinder findings across vulnerability categories. **Buffer-related** issues accounted for 84.6\% of these classified findings.
 

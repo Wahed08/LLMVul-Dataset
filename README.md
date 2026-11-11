@@ -13,6 +13,18 @@ LLMVul is the **first vulnerability-labeled  dataset of AI assisted C/C++ functi
 
 LLMVul mines AI-attributed C/C++ code from authentic developer workflows and public software repositories. It preserves code contribution context through AI-tool attribution and commit metadata while removing duplicate function instances. The extracted functions are analyzed using a multi-tool vulnerability detection pipeline with CWE classification and manual validation. This enables the study of vulnerabilities that arise incidentally during routine AI-assisted development rather than through explicitly security-focused code generation.
 
+### Comparison with ExistingWork & Supplimentary Figures/Tables 
+
+The repository contains another three folders:
+
+- **comparison-with-existingWork/** [comparison-with-existingWork](comparison-with-existingWork/README.md): Comparison of LLMVul with existing datasets and related work.
+- **supplementary_figures/** [supplementary_figures](supplementary_figures/): Supplementary figures, including Signal-Strength and lines-of-code (LoC) distribution.
+- **supplementary_tables/** [supplementary_tables](/supplementary_tables/README.md): Three supplementary tables providing:
+  1. Top 10 projects with the highest number of ensemble-vulnerable functions.
+  2. Flawfinder finding distribution by vulnerability category.
+  3. Distribution of vulnerable functions across CWE categories.
+
+ ---
 
 ## What It Provides
 ✨ **Real production code** — mined from 1,200 GitHub repositories, not researcher-directed prompts
@@ -197,8 +209,6 @@ print(f"Safe:       {(df['vuln_label']==0).sum():,}")
 
 
 
----
-
 ## Dataset Download
 
 The final LLMVul dataset CSV is available as [LLMVul_v3-Updated.csv](full_CSV_dataset/LLMVul_v3-Updated.csv) in **full_CSV_Dataset** directory of the repository. The complete dataset package, including the dataset and its accompanying documentation, is also provided as [LLMVul.zip](LLMVul.zip) in the repository root.
@@ -237,16 +247,6 @@ independently labeled 100 randomly sampled ensemble-vulnerable functions. Inter-
 
 ---
 
-## Comparison of Existing Work & Supplimentary Figures/Tables 
-
-The repository contains another three folders:
-
-- **comparison-with-existingWork/** [comparison-with-existingWork](comparison-with-existingWork/README.md): Comparison of LLMVul with existing datasets and related work.
-- **supplementary_figures/** [supplementary_figures](supplementary_figures/): Supplementary figures, including Signal-Strength and lines-of-code (LoC) distribution.
-- **supplementary_tables/** [supplementary_tables](/supplementary_tables/README.md): Three supplementary tables providing:
-  1. Top 10 projects with the highest number of ensemble-vulnerable functions.
-  2. Flawfinder finding distribution by vulnerability category.
-  3. Distribution of vulnerable functions across CWE categories.
 
 ## License
 
@@ -262,11 +262,6 @@ Scripts: [MIT License](LICENSE)
 If you use LLMVul in your research, please cite:
 
 ```bibtex
-@article{llmvul2026Farhad,
-  author    = {Farhad, Mohammad and Dass, Shuvalaxmi},
-  title     = {LLMVul: A Vulnerability-Labeled Dataset of LLM-Generated C/C++ Functions from Production Repositories},
-  journal={arXiv preprint arXiv:2609.10945},
-  year      = {2026},
-}
+
 ```
 --- -->
