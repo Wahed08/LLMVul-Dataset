@@ -92,7 +92,7 @@ The repository contains another three folders:
 | **CWE** | `cwe_url` | MITRE CWE reference URL, e.g. `https://cwe.mitre.org/data/definitions/120.html` |
 | **Tool CWE** | `cwe_semgrep_raw` | CWE reported by Semgrep. Null if not flagged |
 | **Tool CWE** | `cwe_flawfinder_raw` | CWE reported by Flawfinder. Null if not flagged |
-| **Tool CWE** | `cwe_pattern_match_raw` | CWE reported by pattern matching. Null if not flagged |
+| **Tool CWE** | `cwe_pattern-match_raw` | CWE reported by pattern matching. Null if not flagged |
 | **Tool Meta** | `semgrep_rule` | Semgrep rule ID that triggered the finding, e.g. `dangerous-strcpy` |
 | **Tool Meta** | `flawfinder_risk` | Flawfinder risk level: `1` (lowest) to `5` (highest). `0` if not flagged |
 
