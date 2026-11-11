@@ -1,7 +1,11 @@
 ## Figure 1
 ### Distribution of Function Lengths (Lines of Code)
 
-<!-- ![Function length distribution](function-length.png) -->
+
+
+<p align="center">
+  <img src="function-length.png" width="600">
+</p>
 
 The histogram shows the distribution of functions in the LLMVul dataset across different lines-of-code (LoC) ranges, with function lengths ranging from 5 to 150 lines.
 
@@ -10,7 +14,9 @@ The histogram shows the distribution of functions in the LLMVul dataset across d
 ## Figure 2
 ### Strength of AI-Attributed  Signals
 
-<!-- ![Signal strength](signal-strength.pdf) -->
+<p align="center">
+  <img src="signal-strength.png" width="600">
+</p>
 
 This chart shows how the code was attributed to AI involvement, using the type of evidence found in the commit history:
 
