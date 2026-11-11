@@ -9,11 +9,11 @@
 
 ## Overview
 
-LLMVul is the **first vulnerability-labeled  dataset of AI assisted C/C++ functions mined from real  production GitHub repositories** where developers used AI coding assistants including GitHub Copilot, ChatGPT, Claude Code, Cursor, and Gemini.
+(i) LLMVul is the **first vulnerability-labeled  dataset of AI assisted C/C++ functions mined from real  production GitHub repositories** where developers used AI coding assistants including GitHub Copilot, ChatGPT, Claude Code, Cursor, and Gemini. LLMVul dataset is located in folder [full_CSV_dataset](./full_CSV_dataset/LLMVul_v3-Updated.csv).
 
-LLMVul mines AI-attributed C/C++ code from authentic developer workflows and public software repositories. It preserves code contribution context through AI-tool attribution and commit metadata while removing duplicate function instances. The extracted functions are analyzed using a multi-tool vulnerability detection pipeline with CWE classification and manual validation. This enables the study of vulnerabilities that arise incidentally during routine AI-assisted development rather than through explicitly security-focused code generation.
+(ii) LLMVul mines AI-attributed C/C++ code from authentic developer workflows and public software repositories. It preserves code contribution context through AI-tool attribution and commit metadata while removing duplicate function instances. The extracted functions are analyzed using a multi-tool vulnerability detection pipeline with CWE classification and manual validation. This enables the study of vulnerabilities that arise incidentally during routine AI-assisted development rather than through explicitly security-focused code generation.
 
-### Comparison with Existing Work & Supplimentary Figures/Tables 
+### Comparison with Existing Work & Supplementary Figures/Tables 
 
 The repository contains another three folders:
 
@@ -22,7 +22,7 @@ The repository contains another three folders:
   1. Top 10 projects with the highest number of ensemble-vulnerable functions.
   2. Flawfinder finding distribution by vulnerability category.
   3. Distribution of vulnerable functions across CWE categories.
-- **supplementary_figures/** [supplementary_figures](supplementary_figures/): Supplementary figures, including Signal-Strength and lines-of-code (LoC) distribution.
+- **supplementary_figures/** [supplementary_figures](supplementary_figures/README.md): Supplementary figures, including Signal-Strength and lines-of-code (LoC) distribution.
 
 
  ---
