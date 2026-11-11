@@ -13,7 +13,7 @@ LLMVul is the **first vulnerability-labeled  dataset of AI assisted C/C++ functi
 
 LLMVul mines AI-attributed C/C++ code from authentic developer workflows and public software repositories. It preserves code contribution context through AI-tool attribution and commit metadata while removing duplicate function instances. The extracted functions are analyzed using a multi-tool vulnerability detection pipeline with CWE classification and manual validation. This enables the study of vulnerabilities that arise incidentally during routine AI-assisted development rather than through explicitly security-focused code generation.
 
-### Comparison with ExistingWork & Supplimentary Figures/Tables 
+### Comparison with Existing Work & Supplimentary Figures/Tables 
 
 The repository contains another three folders:
 
