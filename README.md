@@ -17,12 +17,13 @@ LLMVul mines AI-attributed C/C++ code from authentic developer workflows and pub
 
 The repository contains another three folders:
 
-- **comparison-with-existingWork/** [comparison-with-existingWork](comparison-with-existingWork/README.md): Comparison of LLMVul with existing datasets and related work.
-- **supplementary_figures/** [supplementary_figures](supplementary_figures/): Supplementary figures, including Signal-Strength and lines-of-code (LoC) distribution.
-- **supplementary_tables/** [supplementary_tables](/supplementary_tables/README.md): Three supplementary tables providing:
+- **comparison-with-existingWork/** [comparison-with-existingWork](comparison-with-existingWork/README.md): Comparison of LLMVul with existing datasets and related work. (**Section II: Related Work**)
+- **additional_tables/** [additional_tables](additional_tables/README.md): Three additional tables providing (**Section III: Phase 3**):
   1. Top 10 projects with the highest number of ensemble-vulnerable functions.
   2. Flawfinder finding distribution by vulnerability category.
   3. Distribution of vulnerable functions across CWE categories.
+- **supplementary_figures/** [supplementary_figures](supplementary_figures/): Supplementary figures, including Signal-Strength and lines-of-code (LoC) distribution.
+
 
  ---
 
