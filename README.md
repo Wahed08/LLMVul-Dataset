@@ -118,7 +118,7 @@ Majority vote:
 
 ## AI Attribution Signals
 
-Commits are classified as LLM-attributed using 
+Commits are classified as AI-attributed using 
 two signal categories:
 
 **Strong signals** (co-authorship tags):
